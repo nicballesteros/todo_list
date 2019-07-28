@@ -4,8 +4,10 @@
 const express = require('express');
 const db = require('./db/db');
 const bodyParser = require('body-parser');
-
+//const expressip = require('express-ip');
 const server = express();
+
+//server.use(expressip().getIpInfoMiddleware);
 
 //Access Control for the browser
 server.use((req,res,next) => {

@@ -11,6 +11,14 @@ body {
 .container {
   width: 600px;
   margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+        "title title title title"
+        "list list list list"
+        "add delete update reload"
+        "addp deletep updatep reloadp";
 }
 fieldset {
   display: block;
@@ -104,4 +112,44 @@ button:hover {opacity: 1}
 
 button:not(:last-child){
     border-bottom: none;
+}
+
+#title{
+    grid-area: title;
+}
+
+#list{
+    grid-area: list;
+}
+
+#addButton{
+    grid-area: add;
+}
+
+#deleteButton{
+    grid-area: delete;
+}
+
+#updateButton{
+    grid-area: update;
+}
+
+#reloadButton{
+    grid-area: reload;
+}
+
+#deleteParams{
+    grid-area: deletep;
+}
+
+#addParams{
+    grid-area: addp;
+}
+
+#updateParams{
+    grid-area: updatep;
+}
+
+#reloadParams{
+    grid-area: reloadp;
 }

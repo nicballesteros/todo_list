@@ -2,39 +2,56 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Test</title>
+    <title>TODO</title>
     <link rel="stylesheet" type="text/css" href="style.css">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
     <script src="lib/jquery-3.3.1.min.js"></script>
     <script src="app.js"></script>
   </head>
   <body>
-    <div class="container">
-        <div id="list">
+    <div class="container" id="site">
+        <div class="item" id="title">
             <h1>Todo</h1>
+        </div>
+        <div class="item" id="list">
             <table id="todolist">
-                <tr>
+                <tr id="row0">
                     <th>ID</th>
                     <th>Title</th>
                     <th>Description</th>
                 </tr>
-                <tr>
-                    <td><b>1</b></td>
-                    <td>breakfast</td>
-                    <td>eat breakfast</td>
-                </tr>
-                <tr>
-                    <td><b>2</b></td>
-                    <td>workout</td>
-                    <td>go to gym</td>
-                </tr>
             </table>
         </div>
-        <div id="edit">
+        <div class="button" id="addButton">
             <button id="add">Add</button>
+        </div>
+        <div class="button" id="deleteButton">
             <button id="delete">Delete</button>
+        </div>
+        <div class="button" id="updateButton">
             <button id="update">Update</button>
+        </div>
+        <div class="button" id="reloadButton">
             <button id="reload">Reload</button>
+        </div>
+        <div class="buttonParams" id="addParams">
+            <form>
+                Name: <input id="name" name="name">
+                Description: <input id="desc" name="description">
+            </form>
+            
+        </div>
+        <div class="buttonParams" id="deleteParams">
+            <form>
+                ID:     <input id="id" name="id">
+            </form>
+        </div>
+        <div class="buttonParams" id="updateParams">
+            <form>
+                ID:     <input id="idU" name="id">
+                Name: <input id="nameU" name="name">
+                Description: <input id="descU" name="description">
+            </form>
         </div>
     </div>
   </body>
